@@ -738,6 +738,112 @@ const translations: Record<SupportedLanguage, Translations> = {
       decimalPlaces: '소수점 자릿수',
     },
   },
+  'pt-BR': {
+    statusBar: {
+      loading: 'Carregando...',
+      noData: 'Sem dados do Claude Code',
+      notRunning: 'Claude Code não está em execução',
+      error: 'Erro',
+      currentSession: 'Session',
+    },
+    popup: {
+      title: 'Uso do Claude Code',
+      currentSession: 'Session atual',
+      today: 'Hoje',
+      thisMonth: 'Este mês',
+      allTime: 'Todo o período',
+      workspaceToday: 'Este projeto',
+      refresh: 'Atualizar',
+      autoRefresh: 'Atualização automática',
+      settings: 'Configurações',
+      totalTokens: 'Total de tokens',
+      inputTokens: 'Tokens de entrada',
+      outputTokens: 'Tokens de saída',
+      cacheCreation: 'Cache de entrada (Miss)',
+      cacheRead: 'Cache de entrada (Hit)',
+      cost: 'Custo',
+      messages: 'Mensagens',
+      modelBreakdown: 'Uso por modelo',
+      dailyBreakdown: 'Uso diário',
+      monthlyBreakdown: 'Uso mensal',
+      hourlyBreakdown: 'Uso por hora',
+      sessions: 'Sessions',
+      sessionBreakdown: 'Uso por session',
+      project: 'Projeto',
+      startTime: 'Início',
+      duration: 'Duração',
+      hour: 'Hora',
+      projects: 'Projetos',
+      projectBreakdown: 'Uso por projeto',
+      fullPath: 'Caminho completo',
+      peakContext: 'Context window máximo',
+      tokenComposition: 'Composição de tokens',
+      lastActive: 'Última atividade',
+      pricing: 'Preços',
+      refreshPricing: 'Atualizar preço dos tokens',
+      pricingUpdated: 'Preços atualizados',
+      pricingUpdateFailed: 'Falha ao atualizar preços',
+      sortHint: 'Clique no cabeçalho da coluna para ordenar',
+      quota: 'Cota',
+      quotaWindow: 'Janela',
+      quotaLimit: 'Limite',
+      quota5h: '5 horas',
+      quotaWeekly: 'Semanal',
+      quotaHint: 'Dados reais da Anthropic /usage.',
+      contextWindow: 'Context window',
+      contextHint: 'Estimado a partir do log da session — atualiza com a próxima mensagem; /clear ou compactação podem não refletir imediatamente.',
+      contextCostHint: 'Sessions mais longas custam mais, mesmo com cache.\nUse /compact durante a tarefa e /clear ao trocar de tarefa.',
+      contentAnalysis: 'Conteúdo',
+      estimatedNote: 'Estimado pelo tamanho do texto — as proporções relativas são confiáveis; os valores absolutos são aproximados.',
+      byTool: 'Resultados de ferramentas por ferramenta',
+      catUserPrompts: 'Seus prompts',
+      catAssistantText: 'Respostas do assistente',
+      catAssistantThinking: 'Raciocínio do assistente',
+      catToolCalls: 'Chamadas de ferramenta',
+      catToolResults: 'Resultados de ferramenta',
+      estTokens: 'Tokens estimados',
+      share: 'Proporção',
+      resets: 'Reinicia em',
+      cacheHitRate: 'Taxa de acerto do cache',
+      last30days: 'Últimos 30 dias',
+      branches: 'Branches',
+      branchBreakdown: 'Uso por branch',
+      branch: 'Branch',
+      sessionTitle: 'Session',
+      getAdvice: 'Obter conselho de IA',
+      adviceNeedsKey: 'Defina uma chave de API nas configurações para usar o conselho de IA.',
+      adviceGenerating: 'Gerando conselho de uso…',
+      adviceFailed: 'Falha ao obter conselho',
+      adviceScopeOverall: 'Geral (todos os projetos)',
+      adviceScopePrompt: 'Escolha o foco do conselho',
+      adviceDemoButton: 'Ver demonstração',
+      adviceDemoNotice:
+        '# DEMO — Prévia do conselho de uso de IA\n\n' +
+        '> **Este arquivo é uma demo estática, não um conselho real.**\n' +
+        '> O texto abaixo foi escrito manualmente para ilustrar o tipo de saída\n' +
+        '> que o recurso produz. Ele **não** é baseado nos seus dados reais de uso\n' +
+        '> do Claude Code — nada foi enviado a nenhuma API para gerar isso.\n\n' +
+        '### Para obter um conselho real e personalizado com base no SEU uso:\n\n' +
+        '1. Abra as Configurações (`Ctrl+,` / `Cmd+,`)\n' +
+        '2. Pesquise por **`claudeCodeUsage.advice.apiKey`**\n' +
+        '3. Cole uma chave de API compatível com OpenAI — DeepSeek funciona direto\n' +
+        '   ([deepseek.com](https://platform.deepseek.com))\n' +
+        '4. Execute novamente **`Claude Code Usage: Get AI Usage Advice`**',
+      costComposition: 'Composição de custos',
+      date: 'Data',
+      yesterday: 'Ontem',
+      dataDirectory: 'Diretório de dados',
+      noDataMessage: 'Nenhum dado de uso encontrado. Verifique se o Claude Code está em execução e configurado corretamente.',
+      errorMessage: 'Erro ao carregar os dados de uso. Verifique sua configuração.',
+    },
+    settings: {
+      title: 'Configurações de uso do Claude Code',
+      refreshInterval: 'Intervalo de atualização (segundos)',
+      dataDirectory: 'Caminho do diretório de dados',
+      language: 'Idioma',
+      decimalPlaces: 'Casas decimais',
+    },
+  },
 };
 
 export class I18n {
@@ -802,6 +908,8 @@ export class I18n {
         return '한국어 (Korean)';
       case 'de-DE':
         return 'Deutsch (German)';
+      case 'pt-BR':
+        return 'Português Brasileiro (Brazilian Portuguese)';
       case 'en':
       default:
         return 'English';
@@ -824,6 +932,7 @@ export class I18n {
 
     if (locale.includes('ja')) return 'ja';
     if (locale.includes('ko')) return 'ko';
+    if (locale.includes('pt')) return 'pt-BR';
 
     return 'en';
   }

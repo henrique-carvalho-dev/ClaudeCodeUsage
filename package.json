@@ -57,10 +57,12 @@
           "enum": [
             "auto",
             "en",
+            "de-DE",
             "zh-TW",
             "zh-CN",
             "ja",
-            "ko"
+            "ko",
+            "pt-BR"
           ],
           "default": "auto",
           "description": "Display language (auto-detection or manual selection)"

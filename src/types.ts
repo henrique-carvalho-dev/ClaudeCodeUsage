@@ -171,7 +171,7 @@ export interface ModelPricing {
   cache_read_input_token_cost?: number;
 }
 
-export type SupportedLanguage = 'en' | "de-DE" | 'zh-TW' | 'zh-CN' | 'ja' | 'ko';
+export type SupportedLanguage = 'en' | "de-DE" | 'zh-TW' | 'zh-CN' | 'ja' | 'ko' | 'pt-BR';
 
 // Per-git-branch usage aggregate.
 export interface BranchUsage {
